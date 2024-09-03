@@ -118,10 +118,10 @@ export const sideBar = [
   },
   {
     icon: <BsCheck2Circle />,
-    name: "voting panel",
+    name: "Voting Panel",
   },
   {
     icon: <BsPersonBoundingBox />,
-    name: "kyc verification",
+    name: "KYC",
   },
 ];
