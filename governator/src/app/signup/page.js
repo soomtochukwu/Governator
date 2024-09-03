@@ -1,18 +1,15 @@
 "use client";
-// http://localhost:3000/login
-// This page is responsible for rendering the login page
+
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 
 export default function Signup() {
-  // Changed the component name
 
   const router = useRouter();
 
   const handleConnectWallet = () => {
-    // Redirect to wallet connection logic or page
     router.push("/connect-wallet");
   };
 
