@@ -6,10 +6,9 @@ import { Fragment, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import InputButton from "../../../components/InputButton";
-import LoginIcon from "../../../components/LoginIcon";
 
-export default function Signup() {
+
+export default function Signup() { // Changed the component name
 
 	const router = useRouter();
 
@@ -21,7 +20,7 @@ export default function Signup() {
 	return (
 		<Fragment>
 			<div className="min-h-screen flex">
-				{/*************************************************Left Div ********************************************** */}
+				{/* Left Div */}
 				<div className="flex-1 flex flex-col justify-center items-center bg-white p-8">
 					<div className="w-full max-w-md animate-fade-in-down">
 						<div className="flex justify-center mb-6">
@@ -34,7 +33,7 @@ export default function Signup() {
 							/>
 						</div>
 						<h1 className="text-2xl font-bold text-center mb-2 text-[#0E0E2C] animate-fade-in">
-							Signup
+							Login {/* Adjusted the title */}
 						</h1>
 						<p className="text-center text-black mb-6 animate-pulse">
 							Welcome, Click Below to connect wallet
@@ -47,24 +46,21 @@ export default function Signup() {
 								CONNECT WALLET
 							</button>
 						</form>
-								
-						</div>
-						<div className="mt-6 text-center text-sm animate-fade-in">
-							<span className="text-black">
-								If you don't have an account with us,
-								<Link
-									href="/signup"
-									className="text-green-600 hover:text-green-500 transition-all duration-300"
-								>
-									Register here
-								</Link>
-							</span>
-						</div>
+					</div>
+					<div className="mt-6 text-center text-sm animate-fade-in">
+						<span className="text-black">
+							If you don't have an account with us,
+							<Link
+								href="/signup"
+								className="text-green-600 hover:text-green-500 transition-all duration-300"
+							>
+								Register here
+							</Link>
+						</span>
 					</div>
 				</div>
 
-				{/*************************************************Right Div ********************************************** */}
-
+				{/* Right Div */}
 				<div className="hidden lg:flex flex-1 bg-gray-900 text-white items-center justify-center">
 					<div className="w-full max-w-lg">
 						<Image
