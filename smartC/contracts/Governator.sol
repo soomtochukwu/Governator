@@ -95,7 +95,7 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             election.votes_of_candidate2 += 1;
         }
 
-        election.voted[msg.sender] = true;
+        election.voted[Persons[msg.sender].id] = true;
         election.totalVotes += 1;
 
         emit voteCasted(msg.sender, _candidate);
@@ -123,6 +123,7 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             Persons[candidate1].position = position;
             Persons[candidate1].elevatedIn = context;
 
+        election.concluded = true;
             emit electionConcluded(_electionId, candidate1);
         }
 
@@ -131,6 +132,7 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             Persons[candidate2].position = position;
             Persons[candidate2].elevatedIn = context;
 
+        election.concluded = true;
             emit electionConcluded(_electionId, candidate2);
         }
 
@@ -141,7 +143,6 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             );
         }
 
-        election.concluded = true;
     }
 
     function changeElectionDuration(uint _electionId, uint _newDuration /* _newDuration(min) * 60 */ ) public onlyModerators {

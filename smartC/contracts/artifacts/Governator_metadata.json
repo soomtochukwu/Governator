@@ -1324,11 +1324,11 @@
 			]
 		},
 		"smartC/contracts/Governator.sol": {
-			"keccak256": "0x33f5bd90f78ddd754373e4b7dc2289bcded917e21a2ac6a74c1fca419dee8fb3",
+			"keccak256": "0x7d8bccd50cd9335070e8283b6a5aa02aba2d18c6d1cd4011bf885cd572e43b56",
 			"license": "SEE LICENSE IN LICENSE",
 			"urls": [
-				"bzz-raw://df7b79236fc2aa2244263b5460dbaaf75154d7f8732583ac45348315562d8c26",
-				"dweb:/ipfs/QmchyrsPNK4By7GyLXEgWfa4GWTXwmNwNn7971jkmJahgk"
+				"bzz-raw://54d94adaae77c11cfd727e96d3b9286c04451cf3e82ddc96a6313ad701760d8a",
+				"dweb:/ipfs/QmSy8t5yADTuQBcSfnx7RRRBsmeiAe7uPjqVzp5abmigtn"
 			]
 		},
 		"smartC/contracts/lib/NFT.sol": {
@@ -1340,19 +1340,19 @@
 			]
 		},
 		"smartC/contracts/lib/sanityChecks.sol": {
-			"keccak256": "0xc045981b4dadd6dc5858ccba9dac728f7e50de1214e2ecf6eb615bce9b4e6973",
+			"keccak256": "0x024bc1cd35aa90b23a208cd0381f7fdf160808b2b60c4579ac3c60f5f89b7065",
 			"license": "SEE LICENSE IN LICENSE",
 			"urls": [
-				"bzz-raw://e66b5cc67dabc0f61acc3a52169e9af5e8a17d030858261a9e47bf53ed4a4e40",
-				"dweb:/ipfs/QmVgdZ96oSQSCifiSfAJnguwoLTunF89qy51P6qaabC3N3"
+				"bzz-raw://569a18a6da042ef849e9959b4430841cb1502e5212db9dd334fe3e98183644a3",
+				"dweb:/ipfs/QmZZPAmx6xWu7eUxqzUrfWnPeyec2FYPpveH1iC78cQnBs"
 			]
 		},
 		"smartC/contracts/lib/storage.sol": {
-			"keccak256": "0xaeac31f988e63a40bc151aad866ab0b6524cb9e21c177c777f3d13ff738b57f4",
+			"keccak256": "0x8822275e802de58d893f19fd09b792ef420dfe5047dd103b7e4cdf8b0be63513",
 			"license": "SEE LICENSE IN LICENSE",
 			"urls": [
-				"bzz-raw://fa4f771a42305d71417f7a11a92d821865a3ab6c7071594a12306d2e6405c0ef",
-				"dweb:/ipfs/QmU9UpK5TbrYMcaz1MLXg59di2AgzC73XLUWKWDDhXqdNW"
+				"bzz-raw://dcbf400ab3ba7dfa5c14ac925e35bfd499b234e847bcc5338684dec30f05c469",
+				"dweb:/ipfs/QmVosWc3GyBpGk8s6DVzmo5TataBFEp1g6UWURY8hzY4qy"
 			]
 		}
 	},

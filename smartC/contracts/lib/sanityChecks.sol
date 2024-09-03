@@ -26,8 +26,8 @@ contract SanityChecks is Storage {
 
     modifier voted(uint electionId){
         Election storage election = Elections[electionId];
-    
-        require(!election.voted[msg.sender], "ONE VOTE PER PERSON");
+        Person storage person = Persons[msg.sender];
+        require(!election.voted[person.id], "ONE VOTE PER PERSON");
         _;
     }
 
