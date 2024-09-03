@@ -304,11 +304,11 @@
 	},
 	"sources": {
 		"smartC/contracts/lib/storage.sol": {
-			"keccak256": "0xaeac31f988e63a40bc151aad866ab0b6524cb9e21c177c777f3d13ff738b57f4",
+			"keccak256": "0x8822275e802de58d893f19fd09b792ef420dfe5047dd103b7e4cdf8b0be63513",
 			"license": "SEE LICENSE IN LICENSE",
 			"urls": [
-				"bzz-raw://fa4f771a42305d71417f7a11a92d821865a3ab6c7071594a12306d2e6405c0ef",
-				"dweb:/ipfs/QmU9UpK5TbrYMcaz1MLXg59di2AgzC73XLUWKWDDhXqdNW"
+				"bzz-raw://dcbf400ab3ba7dfa5c14ac925e35bfd499b234e847bcc5338684dec30f05c469",
+				"dweb:/ipfs/QmVosWc3GyBpGk8s6DVzmo5TataBFEp1g6UWURY8hzY4qy"
 			]
 		}
 	},
