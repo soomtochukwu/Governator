@@ -11,7 +11,6 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
 
   const handleClick = () => {
     setUser(!user);
-    console.log("clicked");
   };
 
   return (

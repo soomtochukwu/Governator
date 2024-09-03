@@ -4,7 +4,7 @@ import { NotificationCard, HomeTracker, HomeVoteCard } from "./helper";
 const Home = () => {
   return (
     <div>
-      <HomeFilter drop={false} />
+      <HomeFilter  />
       <div className="flex justify-between  gap-3 overflow-x-hidden ">
         <section className="w-2/3 border px-4 space-y-4 py-3 transition">
           <div className=" hover:border-b-2 shadow-md hover:bg-slate-500 bg-[url('/Frame.svg')]  px-1">

@@ -1,6 +1,10 @@
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+"use client";
 
-export function HomeFilter({ drop }) {
+import { IoMdArrowDropdown } from "react-icons/io";
+// import { useState } from "react";
+
+export function HomeFilter() {
+  // const [state, useState] = useState(false);
   return (
     <section className=" flex items-center  w-full justify-between ">
       <article className=" border py-2 px-2 w-2/3 rounded-lg">
@@ -10,11 +14,7 @@ export function HomeFilter({ drop }) {
               sort by:
               <span className="text-green-400">{`Trending Votes`}</span>
             </small>
-            {drop ? (
-              <IoMdArrowDropdown className="text-xl " />
-            ) : (
-              <IoMdArrowDropup className="text-xl " />
-            )}
+            <IoMdArrowDropdown className="text-xl " />
           </p>
           <p>
             <small className=" text-[#fefefe]">
