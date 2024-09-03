@@ -1,85 +1,82 @@
-"use client"
+"use client";
+// http://localhost:3000/login
+// This page is responsible for rendering the login page
 
-
-// http://localhost:3000/signup
-// this page is responsible for rendering the signup page
-// import { Fragment } from "react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import InputButton from "../../../components/InputButton";
+import LoginIcon from "../../../components/LoginIcon";
 
 export default function Signup() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const navigator = useRouter();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const data = {
-      username,
-      password,
-      email,
-    };
-    String(data);
-    console.log(data);
-    // send the data to the server
-    //reset the form
-    setUsername("");
-    setPassword("");
-    setEmail("");
-    //redirect the user to the login page
-    navigator.push("/login");
-  }
+	const router = useRouter();
 
-  return (
-    <div className="shadow-2xl bg-gray-800 max-w-[25rem] m-auto text-left rounded-md px-4 py-2">
-      <h1 className="text-3xl mb-[2rem]">Sign Up</h1>
-      <form className="" onSubmit={handleSubmit}>
-        <Input
-          label="Username"
-          name="username"
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <Input
-          label="email"
-          name="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Input
-          label="password"
-          name="password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="btn bg-[#124212] text-green-50 mt-[1rem]"
-        >
-          Sign Up
-        </button>
-      </form>
-    </div>
-  );
-}
+	const handleConnectWallet = () => {
+		// Redirect to wallet connection logic or page
+		router.push("/connect-wallet");
+	};
 
-export function Input({ label, name, type, value, onChange, ...props }) {
-  return (
-    <div className="flex gap-2 flex-col py-1 text-left ">
-      <label className="capitalize text-blue-200">{label}</label>
-      <input
-        className="w-full rounded-md p-2 bg-white text-slate-800 border-none outline-0"
-        type={type}
-        name={name}
-        value={value}
-        onChange={onChange}
-        {...props}
-        required
-      />
-    </div>
-  );
+	return (
+		<Fragment>
+			<div className="min-h-screen flex">
+				{/*************************************************Left Div ********************************************** */}
+				<div className="flex-1 flex flex-col justify-center items-center bg-white p-8">
+					<div className="w-full max-w-md animate-fade-in-down">
+						<div className="flex justify-center mb-6">
+							<Image
+								src="/welcomeback.svg"
+								alt="Governator Logo"
+								width={300}
+								height={300}
+								className="object-contain"
+							/>
+						</div>
+						<h1 className="text-2xl font-bold text-center mb-2 text-[#0E0E2C] animate-fade-in">
+							Signup
+						</h1>
+						<p className="text-center text-black mb-6 animate-pulse">
+							Welcome, Click Below to connect wallet
+						</p>
+						<form onSubmit={handleConnectWallet}>
+							<button
+								type="submit"
+								className="w-full py-3 mt-4 border border-gray-300 text-sm font-medium rounded-md text-white bg-[#0E0E2C] hover:bg-[#262670] hover:text-white transition-all duration-300"
+							>
+								CONNECT WALLET
+							</button>
+						</form>
+								
+						</div>
+						<div className="mt-6 text-center text-sm animate-fade-in">
+							<span className="text-black">
+								If you don't have an account with us,
+								<Link
+									href="/signup"
+									className="text-green-600 hover:text-green-500 transition-all duration-300"
+								>
+									Register here
+								</Link>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				{/*************************************************Right Div ********************************************** */}
+
+				<div className="hidden lg:flex flex-1 bg-gray-900 text-white items-center justify-center">
+					<div className="w-full max-w-lg">
+						<Image
+							src="/Hidden-mining-bro2.svg"
+							alt="Governator image"
+							width={1000}
+							height={1000}
+							className="object-contain animate-fade-in-left"
+						/>
+					</div>
+				</div>
+			</div>
+		</Fragment>
+	);
 }
