@@ -37,7 +37,7 @@ export default function Login() {
     });
 
     // Redirect the user to the dashboard
-    router.push("/dashboard");
+    router.push("/home");
   };
 
   return (
