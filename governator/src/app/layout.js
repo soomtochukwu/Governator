@@ -2,7 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import HeaderLogo from "../../components/HeaderLogo";
+import HeaderLogo from "../components/HeaderLogo";
 
 import { usePathname } from "next/navigation";
 

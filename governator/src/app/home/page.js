@@ -4,7 +4,7 @@ import {
   HomeFilter,
   HomeTracker,
   HomeVoteCard,
-} from "./helper";
+} from "../dashboard/helper";
 // import Link from "next/link";
 
 const Home = () => {
