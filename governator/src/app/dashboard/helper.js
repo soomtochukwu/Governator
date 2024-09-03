@@ -4,6 +4,9 @@ import {
   IoMdArrowDropdown,
   IoMdArrowDropup,
 } from "react-icons/io";
+import { BsCheck2Circle } from "react-icons/bs";
+import { BsPersonBoundingBox } from "react-icons/bs";
+import { MdDashboard } from "react-icons/md";
 
 export function HomeHeader({ logo, avatarName, avatarImage }) {
   return (
@@ -179,3 +182,18 @@ export function HomeVoteCard({ trend }) {
     </article>
   );
 }
+
+export const sideBar = [
+  {
+    icon: <MdDashboard />,
+    name: "Dashboard",
+  },
+  {
+    icon: <BsCheck2Circle />,
+    name: "voting panel",
+  },
+  {
+    icon: <BsPersonBoundingBox />,
+    name: "kyc verification",
+  },
+];

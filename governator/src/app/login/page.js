@@ -5,8 +5,8 @@ import { Fragment, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import InputButton from "../../../components/InputButton";
-import LoginIcon from "../../../components/LoginIcon";
+import InputButton from "../../components/InputButton";
+import LoginIcon from "../../components/LoginIcon";
 export default function Login() {
   const [loginState, setLoginState] = useState({
     email: "",
