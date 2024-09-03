@@ -1,5 +1,5 @@
 import { Logo, NavBarIcon } from "../dashboard/helper";
-import { adminSidebar } from "./adminmenu";
+import { adminSideBar } from "../dashboard/helper";
 
 function AdminSidebar() {
   return (
@@ -16,7 +16,7 @@ function AdminSidebar() {
       </header>
       <nav className="border border-[#02002D] ">
         <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">
-          {adminSidebar.map((content, idx) => (
+          {adminSideBar.map((content, idx) => (
             <NavBarIcon
               key={idx}
               icon={content.icon}

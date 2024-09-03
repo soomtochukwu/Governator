@@ -1,7 +1,5 @@
 import Image from "next/image";
-import {
-  IoIosNotificationsOutline,
-} from "react-icons/io";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import { IoMdPersonAdd } from "react-icons/io";
 import { RiFunctionAddLine } from "react-icons/ri";
 import { BsCheck2Circle } from "react-icons/bs";
@@ -83,8 +81,6 @@ export function NotificationCard({ avater, name, purpose, time }) {
     </div>
   );
 }
-
-
 
 export function HomeTracker({ tracker }) {
   return (
@@ -171,12 +167,11 @@ export const sideBar = [
 
 export const adminSideBar = [
   {
-    icon: <IoMdPersonAdd/>,
+    icon: <IoMdPersonAdd />,
     name: "add modrator",
   },
   {
-    icon: <RiFunctionAddLine/>,
-    name: "create pool",
+    icon: <RiFunctionAddLine />,
+    name: "create poll",
   },
-
-]
+];
