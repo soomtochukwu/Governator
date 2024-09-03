@@ -1,15 +1,15 @@
-import { Logo } from "./helper";
-import { NavBarIcon } from "./helper";
+import { Logo } from "../home/helper";
+import { NavBarIcon } from "../home/helper";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { TbSettings2 } from "react-icons/tb";
 import { RiMenuUnfold4Line2 } from "react-icons/ri";
 
-export default function MenuBar() {
+export default function MenuBar({ click }) {
   return (
-    <section className="p-4 border border-[#02002D] flex items-center justify-between w-full rounded-lg ">
+    <section className="p-2 border border-[#02002D] flex items-center justify-between w-full rounded-lg ">
       <div>
         <NavBarIcon
-          icon={<RiMenuUnfold4Line2 />}
+          icon={<RiMenuUnfold4Line2 onClick={click} />}
           className={
             "text-xl list-none border border-[#cecdd4] p-1 rounded-lg  bg-white"
           }
@@ -18,7 +18,7 @@ export default function MenuBar() {
       <div className=" flex items-center list-none gap-3">
         <NavBarIcon
           icon={<TbSettings2 />}
-          className={"text-xl  bg-white p-1 rounded-lg"}
+          className={"text-xl bg-white p-1 rounded-lg"}
         />
         <NavBarIcon
           icon={<IoIosNotificationsOutline />}

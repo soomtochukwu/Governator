@@ -1,49 +1,8 @@
 import Image from "next/image";
-import {
-  IoIosNotificationsOutline,
-  IoMdArrowDropdown,
-  IoMdArrowDropup,
-} from "react-icons/io";
+// import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { BsCheck2Circle } from "react-icons/bs";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
-
-export function HomeHeader({ logo, avatarName, avatarImage }) {
-  return (
-    <section>
-      <header className=" flex items-center justify-between rounded-lg border px-4  py-3">
-        <Logo
-          src={logo}
-          width={60}
-          height={60}
-          span={"text-2xl font-bold text-[#fefefe]"}
-          spanName={"Governator"}
-        />
-        <nav>
-          <ul className=" flex items-center gap-5">
-            <NavBarIcon
-              icon={<IoIosNotificationsOutline className="text-3xl" />}
-              span={"badge badge-error badge-xs absolute left-3 top-0"}
-              className={"relative"}
-              iconName={""}
-            />
-            <li>
-              <div className="border p-2 rounded-[2rem]">
-                <Logo
-                  src={avatarImage}
-                  width={40}
-                  height={40}
-                  spanName={avatarName}
-                  span={"text-lg font-bold text-[#fefefe] capitalize "}
-                />
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </section>
-  );
-}
 
 export function Logo({ src, className, span, spanName, width, height }) {
   return (
@@ -81,37 +40,6 @@ export function NotificationCard({ avater, name, purpose, time }) {
         <p>{time}</p>
       </article>
     </div>
-  );
-}
-
-export function HomeFilter({ drop }) {
-  return (
-    <section className=" flex items-center  w-full justify-between ">
-      <article className=" border py-2 px-2 w-2/3 rounded-lg">
-        <div className=" flex items-center justify-between">
-          <p className="border px-1 inline-flex gap-1 rounded-md">
-            <small className=" text-[#fefefe]">
-              sort by:
-              <span className="text-green-400">{`Trending Votes`}</span>
-            </small>
-            {drop ? (
-              <IoMdArrowDropdown className="text-xl " />
-            ) : (
-              <IoMdArrowDropup className="text-xl " />
-            )}
-          </p>
-          <p>
-            <small className=" text-[#fefefe]">
-              Ongoing Voting: <span className="text-green-400">{`24`}</span>
-            </small>
-          </p>
-        </div>
-      </article>
-      <button className="btn btn-success text-white px-[2.5rem]">
-        {" "}
-        create vote{" "}
-      </button>
-    </section>
   );
 }
 

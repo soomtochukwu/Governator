@@ -1,29 +1,30 @@
-import { sideBar, Logo, NavBarIcon } from "./helper";
+"use client";
 
-function SideBar() {
+import { sideBar, Logo, NavBarIcon } from "../home/helper";
+
+function SideBar({ sidebar }) {
   return (
     <section className="min-w-fit md:w-1/4 ">
-      <header className=" border border-[#02002D] p-4 ">
+      <header className=" border border-[#02002D] p-2 transition-all duration-300">
         <Logo
-          className="object-contain"
+          className="object-contain transition-all"
           span="text-2xl font-bold "
           width={50}
           height={50}
           src={"/logo.png"}
-          spanName={"Governator"}
+          spanName={sidebar && "Governator"}
         />
       </header>
-      <nav className="border border-[#02002D] ">
-        <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">
+      <nav className="border border-[#02002D] transition-all duration-300 ">
+        <ul className="py-1 space-y-8 transition  text-nowrap">
           {sideBar.map((content, idx) => (
             <NavBarIcon
               key={idx}
               icon={content.icon}
-              className={
-                "flex items-center justify-start gap-3 hover:bg-[#02002D] p-2 hover:text-white hover:shadow-md hover:px-3 transition-transform duration-300 hover:border-r-[#1AC268] hover:border-r-[.5rem]"
-              }
+              className={`flex items-center justify-start gap-3 hover:bg-[#02002D] p-2 hover:text-white hover:shadow-md hover:px-3
+                 transition-all duration-300 ${!sidebar && "justify-center"}`}
               span="text-md "
-              iconName={content.name}
+              iconName={sidebar && content.name}
             />
           ))}
         </ul>
