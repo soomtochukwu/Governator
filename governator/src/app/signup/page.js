@@ -2,7 +2,11 @@
 // http://localhost:3000/login
 // This page is responsible for rendering the login page
 
+<<<<<<< HEAD
 import { Fragment, useState } from "react";
+=======
+import { useState } from "react";
+>>>>>>> 4e86d79 (uodating)
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
