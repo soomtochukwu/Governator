@@ -53,7 +53,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
             borderRadius: "large",
           })}
           modalSize="compact"
-          initialChain={liskSepolia}
+          initialChain={sepolia}
         >
           {children}
         </RainbowKitProvider>

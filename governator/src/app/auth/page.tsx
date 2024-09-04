@@ -93,22 +93,23 @@ align-items: center;
     mintToken = async (_nft) => {
       try {
         // Request account access
-        await window.ethereum
-          .request({ method: "eth_requestAccounts" })
-          .then(async (ac) => {
-            // Get the user's account address
-            const userAccount = ac[0];
-            console.log(userAccount);
-            // Send a transaction to the mint function
-            const tx = await contract.methods
-              .safeMint(userAccount, _nft)
-              .send({ from: userAccount });
-            // @ts-ignore
-            set_isRegistered(Person.data[4]);
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        const userAccount = accounts[0];
 
-            console.log("Mint successful:", tx);
-            push("/home");
-          });
+        // Estimate gas for the mint function
+        const estimatedGas = await contract.methods
+          .safeMint(_nft)
+          .estimateGas({ from: userAccount });
+
+        // Send the transaction with estimated gas
+        const tx = await contract.methods
+          .safeMint(_nft)
+          .send({ from: userAccount, gas: String(estimatedGas) });
+
+        console.log("Mint successful:", tx);
+        push("/home");
       } catch (error) {
         console.error("Minting failed:", error.message);
       }
@@ -212,6 +213,7 @@ align-items: center;
     if (address && isConnected && Person.data) {
       (async () => {
         setNFTID(String(Person.data[0]));
+        set_isRegistered(Person.data[4]);
       })();
     }
   }, [Person.data, address, isConnected]);
@@ -219,27 +221,27 @@ align-items: center;
   useEffect(() => {
     isRegistered ? push("/home") : null;
   }, [isRegistered, push]);
-
+  useEffect(() => {}, []);
   useEffect(() => {
-    // if ((typeof hash) == "string") {
-    (async () => {
-      console.log("generating");
-      fetch("https://hcti.io/v1/image", options)
-        .then((res) => {
-          if (res.ok) {
-            return res.json();
-          } else {
-            return Promise.reject(res.status);
-          }
-        })
-        .then((data) => {
-          // Image URL is available here
-          console.log(data.url);
-          setNFTURL(data.url);
-        })
-        .catch((err) => console.error(err));
-    })();
-    // }
+    if (hash.length) {
+      (async () => {
+        console.log("generating");
+        fetch("https://hcti.io/v1/image", options)
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return Promise.reject(res.status);
+            }
+          })
+          .then((data) => {
+            // Image URL is available here
+            console.log(data.url);
+            setNFTURL(data.url);
+          })
+          .catch((err) => console.error(err));
+      })();
+    }
     // push("/")
   }, [hash]);
   //
@@ -274,21 +276,16 @@ align-items: center;
                   />
                   <button
                     className="bg-green-800"
-                    onClick={() => {
-                      const tx = writeContractAsync({
-                        abi: Governator_ABI,
-                        address: Governator_Address,
-                        functionName: "registerPerson",
-                        args: [callSign],
-                      })
-                        .then((e) => {
-                          console.log(e);
-                          set_hash(String(e));
+                    onClick={async () => {
+                      // const tx = ;
+                      await set_hash(
+                        await writeContractAsync({
+                          abi: Governator_ABI,
+                          address: Governator_Address,
+                          functionName: "registerPerson",
+                          args: [callSign],
                         })
-                        .catch((e) => {
-                          console.log(e.message);
-                        });
-                      // @ts-ignore
+                      );
                     }}
                   >
                     Register Now
