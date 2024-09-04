@@ -1,5 +1,3 @@
-
-
 const KYCLevelCard = ({
   level,
   perks,
@@ -9,9 +7,7 @@ const KYCLevelCard = ({
 }) => {
   return (
     <div
-      className={`p-6 border rounded-lg ${
-        highlighted ? "border-[#00ff85]" : "border-gray-300"
-      }`}
+      className={`p-6 border rounded-lg text-nowrap text-left ${"hover:border-[#00ff85]"}`}
     >
       <h3
         className={`text-lg font-semibold mb-4 ${
@@ -44,11 +40,7 @@ const KYCLevelCard = ({
       </div>
 
       <button
-        className={`w-full py-3 rounded-md text-white ${
-          highlighted
-            ? "bg-[#00ff85] hover:bg-[#00e074]"
-            : "bg-gray-500 hover:bg-gray-600"
-        }`}
+        className={`w-full py-3 rounded-md text-white bg-gray-500 ${" hover:bg-[#00e074]"}`}
       >
         {buttonText}
       </button>

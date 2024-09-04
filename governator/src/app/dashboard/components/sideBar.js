@@ -1,8 +1,8 @@
 import { sideBar, Logo, NavBarIcon } from "./helper";
-import Link from "next/link"; 
+import Link from "next/link";
 function SideBar() {
   return (
-    <section className="min-w-fit md:w-1/4 ">
+    <section className="min-w-fit md:w-1/4 capitalize ">
       <header className=" border border-[#02002D] p-4 ">
         <Logo
           className="object-contain"
