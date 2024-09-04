@@ -11,7 +11,7 @@ export default function MenuBar() {
         <NavBarIcon
           icon={<RiMenuUnfold4Line2 />}
           className={
-            "text-xl list-none border border-[#cecdd4] p-1 rounded-lg  bg-white"
+            "text-xl list-none border border-[#cecdd4] p-1 rounded-lg  bg-white  hidden md:flex"
           }
         />
       </div>
