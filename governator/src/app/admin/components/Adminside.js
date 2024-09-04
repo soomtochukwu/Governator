@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Logo, NavBarIcon } from "../dashboard/helper";
-import { adminSideBar } from "../dashboard/helper";
+import { Logo, NavBarIcon } from "./helper";
+import { adminSideBar } from "./helper";
 
 function AdminSidebar() {
   return (
-    <section className="min-w-fit md:w-1/4 ">
+    <section className="min-w-fit md:w-1/4 capitalize">
       <header className=" border border-[#02002D] p-4 ">
         <Logo
           className="object-contain"
