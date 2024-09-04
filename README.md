@@ -1,6 +1,6 @@
 # Governator
 
-<img src="../Governator/governator/public/LogoForReadme.jpg" width="400" style="border-radius: 10px;" class="fade-in">
+<img src="../Governator/governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in">
 
 Empowering Democracy, Securing Every Vote.
 
@@ -51,7 +51,6 @@ To install and run Governator, ensure you have the following:
 - npm (>= 6.x)
 - Next.js
 - Web3.js
-- Lisk
 - Hardhat
 - wagmi
 - rainbow-me/rainbowkit
@@ -94,7 +93,7 @@ Governator's smart contracts integrate with external contracts from the lib dire
 
 6. **changeElectionDuration**
 
-<img src="../Governator/governator/public/PhonePicture.jpeg" width="300" style="border-radius: 15px;">
+<img src="../Governator/governator/public/NFT_BG.png" width="300" style="border-radius: 15px;">
 
 ### Authors and Acknowledgments 
 #### Main Contributors
