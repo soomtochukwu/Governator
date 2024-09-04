@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/* <ThemeProvider> */}
+      {/* <link rel="style/css" href="/logo.png"></link> */}
       <body className={inter.className}>
         {pathname === "/login" ? <HeaderLogo /> : null}
         {children}
