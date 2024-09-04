@@ -7,9 +7,9 @@ const config = {
   solidity: "0.8.20",
   networks: {
     sepolia: {
-      url: "https://eth-sepolia.g.alchemy.com/v2/GcSK5QfitCMhRPERfliHTLccqMbQfu0X",
+      url: "https://eth-sepolia.g.alchemy.com/v2/fSi9ykmiqqul0EIfg4cWBIvL7YBockwl",
       // @ts-ignore
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [process.env.WALLET_KEY],
       chainId: 11155111,
       blockConfirmations: 6,
     },

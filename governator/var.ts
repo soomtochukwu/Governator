@@ -1,5 +1,5 @@
 export const Governator_Address =
-  "0x269A63EdFb5365a33DE86181DC99B2832334D5C7" as const;
+  "0x1d2b37C59F101A3022871BBF1BddA0086170847D" as const;
 
 export const Governator_ABI = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
