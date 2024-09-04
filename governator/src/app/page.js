@@ -1,8 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import "./globals.css";
 import FeaturesSection from "../components/FeaturesSection";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+
+import { useAccount } from "wagmi";
+import { useRouter } from "next/navigation";
+
 const Governator = () => {
+  const //
+    { isConnected, address } = useAccount(),
+    { push } = useRouter();
+
+  useEffect(() => {
+    if (isConnected && address) {
+      push("/auth");
+    }
+  }, [isConnected, address]);
   return (
     <div className="w-screen bg-green-50 flex flex-col items-center ">
       <div className="flex hero p-8 bg-green-800 items-center justify-center h-screen">

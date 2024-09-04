@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { PinataSDK } from "pinata";
 import Web3 from "web3";
-
+import { Governator, Governator_ABI } from "../../../var";
 const page = () => {
   const //
     [NFTID, setNFTID] = useState("4"),

@@ -6,12 +6,12 @@ import "./lib/sanityChecks.sol";
 import "./lib/storage.sol";
 import "./lib/NFT.sol";
 
-contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
+contract Governator is Storage, Governator_NFT(msg.sender), SanityChecks {
     constructor() {
         registerPerson("MAZI");
         Moderators[msg.sender] = true;
 
-/* 
+        /* 
         initiateElection(
             "National mid-term presidential election, 2027, PO vs BAT",
             0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,
@@ -74,15 +74,13 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
     function castVote(
         uint _electionId,
         address _candidate
-    )
-        public
-        registered(msg.sender)
-        elapsed(_electionId)
-        voted(_electionId)
-    {
+    ) public registered(msg.sender) elapsed(_electionId) voted(_electionId) {
         require(Persons[_candidate].exists, "CANDIDATE DOES NOT EXIST");
-        require(balanceOf(msg.sender) == 1, "CANNOT VOTE: no NFT | MORE THAN ONE NFT");
-        
+        require(
+            balanceOf(msg.sender) == 1,
+            "CANNOT VOTE: no NFT | MORE THAN ONE NFT"
+        );
+
         Election storage election = Elections[_electionId];
 
         address candidate1 = election.candidate1;
@@ -123,7 +121,7 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             Persons[candidate1].position = position;
             Persons[candidate1].elevatedIn = context;
 
-        election.concluded = true;
+            election.concluded = true;
             emit electionConcluded(_electionId, candidate1);
         }
 
@@ -132,7 +130,7 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
             Persons[candidate2].position = position;
             Persons[candidate2].elevatedIn = context;
 
-        election.concluded = true;
+            election.concluded = true;
             emit electionConcluded(_electionId, candidate2);
         }
 
@@ -142,11 +140,17 @@ contract Governator is Storage, Governator_NFT(msg.sender),SanityChecks {
                 "Draw: no winner because of equal votes, voting continues"
             );
         }
-
     }
 
-    function changeElectionDuration(uint _electionId, uint _newDuration /* _newDuration(min) * 60 */ ) public onlyModerators {
+    function changeElectionDuration(
+        uint _electionId,
+        uint _newDuration /* _newDuration(min) * 60 */
+    ) public onlyModerators {
         Election storage election = Elections[_electionId];
         election.conclusionTime = _newDuration * 60;
+    }
+
+    function removePerson(address person) public onlyModerators {
+        Persons[person].exists = false;
     }
 }
