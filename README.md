@@ -1,15 +1,5 @@
 # Governator
 
-<style>
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    .fade-in {
-        animation: fadeIn ease-in 1s;
-    }
-</style>
-
 <img src="../Governator/governator/public/LogoForReadme.jpg" width="400" style="border-radius: 10px;" class="fade-in">
 
 Empowering Democracy, Securing Every Vote.
