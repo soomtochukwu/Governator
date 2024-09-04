@@ -1,6 +1,6 @@
 # Governator
 
-<img src="../governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in">
+<!-- <img src="../governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in"> -->
 
 Empowering Democracy, Securing Every Vote.
 
