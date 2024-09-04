@@ -6,8 +6,6 @@ import { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { PinataSDK } from "pinata";
-import Web3 from "web3";
-import Link from "next/link";
 
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import { Governator_ABI, Governator_Address } from "../../../var";
@@ -40,7 +38,7 @@ export default function Login() {
             </div>
             `,
       css: `.ngtBG {
-  background-image: url('https://cdn.pixabay.com/photo/2022/03/01/02/51/galaxy-7040416_640.png');;
+  background-image: url('https://i.ibb.co/Jk0Njkg/voter-s-nft-card.png');;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,33 +84,16 @@ align-items: center;
         Authorization: "Basic " + btoa(username + ":" + password),
       },
     },
-    web3 = new Web3(window.ethereum),
     contractABI = Governator_ABI,
     contractAddress = Governator_Address,
-    contract = new web3.eth.Contract(contractABI, contractAddress),
     mintToken = async (_nft) => {
-      try {
-        // Request account access
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        const userAccount = accounts[0];
-
-        // Estimate gas for the mint function
-        const estimatedGas = await contract.methods
-          .safeMint(_nft)
-          .estimateGas({ from: userAccount });
-
-        // Send the transaction with estimated gas
-        const tx = await contract.methods
-          .safeMint(_nft)
-          .send({ from: userAccount, gas: String(estimatedGas) });
-
-        console.log("Mint successful:", tx);
-        push("/home");
-      } catch (error) {
-        console.error("Minting failed:", error.message);
-      }
+      const tx = writeContractAsync({
+        abi: Governator_ABI,
+        address: Governator_Address,
+        functionName: "safeMint",
+        args: [_nft],
+      });
+      console.log("NFT minted:", tx);
     },
     JWT =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIzMWNiOWY3Ny01Y2Y2LTQzNDYtOGE1OS1jNTljNWRhNDViZmQiLCJlbWFpbCI6Im1hemlzb210b2NodWt3dUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJpZCI6IkZSQTEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX0seyJpZCI6Ik5ZQzEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiYzU0ZTcyNzY1ZjllNDlmY2ExZmMiLCJzY29wZWRLZXlTZWNyZXQiOiIyMWM2OWJiMzdjODdjNDllZTJiYmFkZDUyNDU1ZDBjMjFlOGQ5MzdkMzg5OTk5ZDk3ZTNjZDQ4ZGQ5ZmRhMGIzIiwiaWF0IjoxNzI1MjkxNDI2fQ.w1WgfzWPinznarRsfijiID7uEsPzlWUDkbJeWNXwHH0",
