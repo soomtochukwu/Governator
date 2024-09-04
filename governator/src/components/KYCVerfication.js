@@ -25,7 +25,7 @@ const KYCVerification = () => {
       buttonText: "Start KYC",
     },
     {
-      level: 2,
+      level: 3,
       perks: [
         "Can participate on up to 500 public votes, and 50 private votes",
         "Can create up to 50 public votes and 15 private votes",
@@ -39,7 +39,7 @@ const KYCVerification = () => {
   ];
 
   return (
-    <div className="p-8">
+    <div className="">
       <h2 className="text-2xl font-bold mb-2">KYC Verification</h2>
       <p className="text-xl text-[#00ff85] mb-8">
         My KYC Level: <span className="font-semibold">Level 1</span>
