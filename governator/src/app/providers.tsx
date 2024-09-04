@@ -14,7 +14,7 @@ import {
   trustWallet,
   ledgerWallet,
 } from "@rainbow-me/rainbowkit/wallets";
-import { lisk, liskSepolia } from "wagmi/chains";
+import { sepolia, liskSepolia } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 
@@ -31,11 +31,9 @@ const config = getDefaultConfig({
     },
   ],
   chains: [
-    lisk,
+    sepolia,
     liskSepolia,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [liskSepolia]
-      : []),
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
   ],
   ssr: true,
 });

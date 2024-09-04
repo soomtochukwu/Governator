@@ -1,37 +1,26 @@
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("@nomicfoundation/hardhat-toolbox");
+require("hardhat-deploy");
 require("dotenv").config();
-
-const config: HardhatUserConfig = {
-  solidity: "0.8.23",
+const config = {
+  solidity: "0.8.20",
   networks: {
-    // for testnet
-    "lisk-sepolia": {
-      url: "https://rpc.sepolia-api.lisk.com",
-      accounts: [process.env.WALLET_KEY as string],
-      gasPrice: 1000000000,
+    sepolia: {
+      url: "https://eth-sepolia.g.alchemy.com/v2/GcSK5QfitCMhRPERfliHTLccqMbQfu0X",
+      // @ts-ignore
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 11155111,
+      blockConfirmations: 6,
     },
   },
   etherscan: {
-    // Use "123" as a placeholder, because Blockscout doesn't need a real API key, and Hardhat will complain if this property isn't set.
-    apiKey: {
-      "lisk-sepolia": "123",
-    },
-    customChains: [
-      {
-        network: "lisk-sepolia",
-        chainId: 4202,
-        urls: {
-          apiURL: "https://sepolia-blockscout.lisk.com/api",
-          browserURL: "https://sepolia-blockscout.lisk.com",
-        },
-      },
-    ],
+    apiKey: process.env.ETHERSCAN_KEY,
   },
-  sourcify: {
-    enabled: false,
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
   },
 };
-
-export default config;
+exports.default = config;

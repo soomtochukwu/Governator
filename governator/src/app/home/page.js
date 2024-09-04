@@ -1,7 +1,19 @@
+"use client";
 import { HomeFilter } from "./homeFilter";
 import { NotificationCard, HomeTracker, HomeVoteCard } from "./helper";
+import { useAccount } from "wagmi";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Home = () => {
+  const //
+    { address, isConnected } = useAccount(),
+    { push } = useRouter();
+  useEffect(() => {
+    if (!(address, isConnected)) {
+      push("/");
+    }
+  }, [address, isConnected, push]);
   return (
     <div>
       <HomeFilter />
