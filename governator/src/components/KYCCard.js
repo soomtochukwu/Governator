@@ -1,19 +1,23 @@
-import React from 'react';
+
 
 const KYCLevelCard = ({
   level,
   perks,
   requirements,
   buttonText,
-  highlighted = false
+  highlighted = false,
 }) => {
   return (
     <div
       className={`p-6 border rounded-lg ${
-        highlighted ? 'border-[#00ff85]' : 'border-gray-300'
+        highlighted ? "border-[#00ff85]" : "border-gray-300"
       }`}
     >
-      <h3 className={`text-lg font-semibold mb-4 ${highlighted ? 'text-[#010014]' : 'text-[#020617]'}`}>
+      <h3
+        className={`text-lg font-semibold mb-4 ${
+          highlighted ? "text-[#010014]" : "text-[#020617]"
+        }`}
+      >
         Level {level}
       </h3>
 
@@ -42,8 +46,8 @@ const KYCLevelCard = ({
       <button
         className={`w-full py-3 rounded-md text-white ${
           highlighted
-            ? 'bg-[#00ff85] hover:bg-[#00e074]'
-            : 'bg-gray-500 hover:bg-gray-600'
+            ? "bg-[#00ff85] hover:bg-[#00e074]"
+            : "bg-gray-500 hover:bg-gray-600"
         }`}
       >
         {buttonText}
