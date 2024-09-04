@@ -1,6 +1,3 @@
-import React from "react";
-
-
 export default function InputButton({ label, name, type, value, onChange, icon, ...props }) {
 	return (
 		<div className="relative flex items-center">

@@ -154,14 +154,17 @@ export const sideBar = [
   {
     icon: <MdDashboard />,
     name: "Dashboard",
+    path:"/dashboard"
   },
   {
     icon: <BsCheck2Circle />,
     name: "voting panel",
+    path:"/dashboard/votingPanel"
   },
   {
     icon: <BsPersonBoundingBox />,
     name: "kyc verification",
+    path:'/dashboard/kyc'
   },
 ];
 
@@ -169,9 +172,11 @@ export const adminSideBar = [
   {
     icon: <IoMdPersonAdd />,
     name: "add modrator",
+    path: "/admin/moderator",
   },
   {
     icon: <RiFunctionAddLine />,
     name: "create poll",
+    path: "/admin/create-polls",
   },
 ];
