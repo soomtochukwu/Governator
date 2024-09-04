@@ -18,7 +18,7 @@ function AdminSidebar() {
       <nav className="border border-[#02002D] min-h-full ">
         <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">
           {adminSideBar.map((content, idx) => (
-            <Link href={content.path}>
+            <Link key={idx + content.name} href={content.path}>
               <NavBarIcon
                 key={idx}
                 icon={content.icon}

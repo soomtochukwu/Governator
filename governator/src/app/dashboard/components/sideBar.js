@@ -16,7 +16,7 @@ function SideBar() {
       <nav className="border border-[#02002D] ">
         <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">
           {sideBar.map((content, idx) => (
-            <Link href={content.path}>
+            <Link key={idx + content.name} href={content.path}>
               <NavBarIcon
                 key={idx}
                 icon={content.icon}
