@@ -306,18 +306,22 @@ align-items: center;
     mintToken = async (_nft) => {
       try {
         // Request account access
-        await window.ethereum
-          .request({ method: "eth_requestAccounts" })
-          .then(async (ac) => {
-            // Get the user's account address
-            const userAccount = ac[0];
-            console.log(userAccount);
-            // Send a transaction to the mint function
-            const tx = await contract.methods
-              .mint(userAccount, _nft)
-              .send({ from: userAccount });
-            console.log("Mint successful:", tx);
-          });
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        const userAccount = accounts[0];
+
+        // Estimate gas for the mint function
+        const estimatedGas = await contract.methods
+          .safeMint(_nft)
+          .estimateGas({ from: userAccount });
+
+        // Send the transaction with estimated gas
+        const tx = await contract.methods
+          .mint(_nft)
+          .send({ from: userAccount, gas: estimatedGas });
+
+        console.log("Mint successful:", tx);
       } catch (error) {
         console.error("Minting failed:", error.message);
       }
