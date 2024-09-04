@@ -13,8 +13,6 @@ export default function ModeratorPage() {
   }
   return (
     <div className="pl-3">
-      <h1 className="my-4 ">Add Moderator</h1>
-
       <section>
         <form className=" space-y-4" onSubmit={submit}>
           <div>
