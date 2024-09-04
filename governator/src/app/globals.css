@@ -29,26 +29,20 @@ body {
   }
 }
 
-.nav>* {
-  /* background-color: red; */
-  color: green;
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem
-      /* 32px */
-      * var(--tw-space-x-reverse));
-  margin-left: calc(2rem
-      /* 32px */
-      * calc(1 - var(--tw-space-x-reverse)));
-  border: 1px solid gray;
-  padding: 7px;
-  border-radius: 7px;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 .ngtBG {
   background-image: url('https://cdn.pixabay.com/photo/2022/03/01/02/51/galaxy-7040416_640.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.trans {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.hero {
+  background-image: url("/hero_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
