@@ -1,6 +1,6 @@
 # Governator
 
-<img src="../Governator/governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in">
+<img src="../governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in">
 
 Empowering Democracy, Securing Every Vote.
 
@@ -93,7 +93,7 @@ Governator's smart contracts integrate with external contracts from the lib dire
 
 6. **changeElectionDuration**
 
-<img src="../Governator/governator/public/NFT_BG.png" width="300" style="border-radius: 15px;">
+<img src="../governator/public/NFT_BG.png" width="300" style="border-radius: 15px;">
 
 ### Authors and Acknowledgments 
 #### Main Contributors
