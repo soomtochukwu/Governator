@@ -1,7 +1,7 @@
 # Governator
 
 <img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/LOGO%20(1).png" width="200" style="border-radius: 10px; display: block; margin-left: auto; margin-right: auto;" align="center" class="fade-in">
-<p align="center" style="font-size: 20px; font-weight: bold; color: #007BFF; margin-top: 20px; margin-bottom: 20px;">
+<p style="font-size: 20px; font-weight: bold; color: #007BFF; margin-top: 20px; margin-bottom: 20px;">
   Empowering Democracy, Securing Every Vote.
 </p>
 
@@ -67,9 +67,9 @@ Start making a difference today!
   - **Democratic Process**: Moderators are chosen through a transparent voting mechanism, ensuring accountability and fairness.
   - **Oversight**: Moderators oversee the election process, ensuring compliance with established rules.
 ## Preview
-<img src="../Governator/governator/public/landing.jpg" width="600" style="border-radius: 10px 10px 0px 0px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
-<img src="../Governator/governator/public/Desktop - 3.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
-<img src="../Governator/governator/public/Desktop - 4.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/landing.jpg" width="600" style="border-radius: 10px 10px 0px 0px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/Desktop%20-%203.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/Desktop%20-%204.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
 
 
 ### 📋 Prerequisites
@@ -101,7 +101,7 @@ Explore our core functionalities:
 - 🏁 **[concludeElection](https://github.com/soomtochukwu/Governator/blob/main/smartC/README.md#5-concludeelection)** - Finalize the election and announce the results.
 
 <figure align="center">
-  <img src="../Governator/governator/public/mobile_view_app.jpg" width="300" alt="Mobile View" style="border-radius: 15px;">
+  <img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/mobileview.jpg" width="300" alt="Mobile View" style="border-radius: 15px;">
   <figcaption>Mobile view of the Governator app showcasing its loading state.</figcaption>
 </figure>
 
