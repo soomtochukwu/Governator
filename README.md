@@ -125,7 +125,7 @@ Explore our core functionalities:
 - **⏳ How long does an election last by default, and can it be changed?**  
   *The default duration is 4 days, which can be changed using the `changeElectionDuration` function.*
 ### 🤝 Support
-For any questions or support, feel free to reach out through [our support channel](your email or support link).
+For any questions or support, feel free to reach out to us through this email governator2024@gmail.com.
 
 ### 🔄 Changelog
 Keep track of all changes and updates to our project:
