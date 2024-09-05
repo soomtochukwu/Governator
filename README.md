@@ -67,10 +67,10 @@ Start making a difference today!
   - **Democratic Process**: Moderators are chosen through a transparent voting mechanism, ensuring accountability and fairness.
   - **Oversight**: Moderators oversee the election process, ensuring compliance with established rules.
 ## Preview
-<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/landing.jpg" width="600" style="border-radius: 10px 10px 0px 0px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
-<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/Desktop%20-%203.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/HomeScreen.png" width="600" style="border-radius: 10px 10px 0px 0px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<!-- <img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/Desktop%20-%203.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
 <img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/Desktop%20-%204.jpg" width="600" style="border-radius: 0px 0px 10px 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
-
+ -->
 
 ### 📋 Prerequisites
 
