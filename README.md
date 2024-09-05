@@ -29,7 +29,7 @@
 **Governator** is a decentralized app (voting platform) designed to:
 
 - **Secure** and **streamline decision-making processes** in Africa.
-- Utilize **blockchain technology** for transparency and anonymity.
+- Utilize **blockchain technology** for easy useablity, transparency of voting and coordination of electoral processes.
 - Facilitate **governmental electoral processes** and **institutional decision-making**.
 
 This platform is at the forefront of leveraging technology to enhance democracy and governance.
