@@ -1,6 +1,6 @@
 # Governator
 
-<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/LOGO%20(1).png" width="200" style="border-radius: 10px; display: block; margin-left: auto; margin-right: auto;" class="fade-in">
+<img src="https://github.com/soomtochukwu/Governator/blob/main/governator/public/LOGO%20(1).png" width="200" style="border-radius: 10px; display: block; margin-left: auto; margin-right: auto;" align="center" class="fade-in">
 <p align="center" style="font-size: 20px; font-weight: bold; color: #007BFF; margin-top: 20px; margin-bottom: 20px;">
   Empowering Democracy, Securing Every Vote.
 </p>
