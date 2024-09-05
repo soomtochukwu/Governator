@@ -12,9 +12,9 @@ export default function ModeratorPage() {
     console.log(data);
   }
   return (
-    <div className="pl-3">
+    <div className="mb-3">
       <section>
-        <form className=" space-y-4" onSubmit={submit}>
+        <form className=" space-y-4 text-left mt-4" onSubmit={submit}>
           <div>
             <input
               type="text"
@@ -25,7 +25,7 @@ export default function ModeratorPage() {
               required
             />
           </div>
-          <button className="btn btn-success">
+          <button className="btn btn-success ">
             add Moderator{" "}
             <span>
               <IoIosPersonAdd />

@@ -5,7 +5,7 @@ import { RiMenuUnfold4Line2 } from "react-icons/ri";
 
 export default function AdminMenu() {
   return (
-    <section className="p-4 border border-[#02002D] flex items-center justify-between w-full rounded-lg ">
+    <section className="p-4 border border-[#02002D] flex items-center justify-between w-full rounded-lg  ">
       <div>
         <NavBarIcon
           icon={<RiMenuUnfold4Line2 />}

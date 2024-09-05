@@ -11,12 +11,12 @@ export default function AdminLayout({ children }) {
       <AdminSidebar sidebar={false} />
       <div className="relative w-full ">
         <AdminMenu />
-        <div className="w-full h-12 bg-white flex items-center px-4">
+        <div className="w-full  bg-white flex items-center px-4">
           <h1 className="text-2xl font-bold">
             {pathName === "Admin" ? pathName : pathName[2]}
           </h1>
         </div>
-        <div className="w-full h-full overflow-x-hidden">{children}</div>
+        <div className="min-w-fit h-full">{children}</div>
       </div>
     </main>
   );
