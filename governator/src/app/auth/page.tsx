@@ -94,7 +94,7 @@ align-items: center;
         args: [_nft],
       });
       console.log("NFT minted:", tx);
-      push("/home");
+      push("/dashboard");
     },
     JWT =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIzMWNiOWY3Ny01Y2Y2LTQzNDYtOGE1OS1jNTljNWRhNDViZmQiLCJlbWFpbCI6Im1hemlzb210b2NodWt3dUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJpZCI6IkZSQTEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX0seyJpZCI6Ik5ZQzEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiYzU0ZTcyNzY1ZjllNDlmY2ExZmMiLCJzY29wZWRLZXlTZWNyZXQiOiIyMWM2OWJiMzdjODdjNDllZTJiYmFkZDUyNDU1ZDBjMjFlOGQ5MzdkMzg5OTk5ZDk3ZTNjZDQ4ZGQ5ZmRhMGIzIiwiaWF0IjoxNzI1MjkxNDI2fQ.w1WgfzWPinznarRsfijiID7uEsPzlWUDkbJeWNXwHH0",
@@ -201,7 +201,7 @@ align-items: center;
   }, [Person.data, address, isConnected]);
 
   useEffect(() => {
-    isRegistered ? push("/home") : null;
+    isRegistered ? push("/dashboard") : null;
   }, [isRegistered, push]);
   useEffect(() => {}, []);
   useEffect(() => {

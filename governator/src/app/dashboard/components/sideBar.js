@@ -4,14 +4,19 @@ function SideBar() {
   return (
     <section className="min-w-fit md:w-1/4 capitalize ">
       <header className=" border border-[#02002D] p-4 ">
-        <Logo
-          className="object-contain"
-          span="text-2xl font-bold hidden md:flex"
-          width={50}
-          height={50}
-          src={"/logo.png"}
-          spanName={"Governator"}
-        />
+        <Link key="scd" href="/home">
+          <Logo
+            className="object-contain"
+            span="text-2xl font-bold hidden md:flex"
+            width={50}
+            height={50}
+            src={"/logo.png"}
+            spanName={"Governator"}
+          />
+        </Link>
+        {/* 
+      
+        */}
       </header>
       <nav className="border border-[#02002D] ">
         <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">

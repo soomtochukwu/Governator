@@ -53,11 +53,7 @@ export function HomeFilter() {
             </small>
           </p>
         </div>
-      </article>
-      <button className="btn btn-success text-white px-[2.5rem]">
-        {" "}
-        create poll{" "}
-      </button>
+      </article>{" "}
     </section>
   );
 }
