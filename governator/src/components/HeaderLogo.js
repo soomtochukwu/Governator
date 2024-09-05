@@ -1,3 +1,5 @@
+"use client";
+
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,15 +7,8 @@ import Link from "next/link";
 // import "../../governator/src/app/globals.css";
 const Header = () => {
   return (
-    <header className="bg-white  flex items-center justify-between  shadow w-screen px-2 py-3">
-      <Link href="/">
-        <Logo
-          className="object-contain"
-          span="text-2xl font-bold text-gray-800 "
-          width={50}
-          height={50}
-        />
-      </Link>
+    <header className="flex items-center justify-between  shadow w-screen px-2 py-3">
+      <Logo span={"/logo.png"} width={"60"} height={"60"}></Logo>
       <div className="nav">
         <ConnectButton
           accountStatus={{
