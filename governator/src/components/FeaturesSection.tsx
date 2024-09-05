@@ -23,12 +23,6 @@ const FeaturesSection = () => {
 
           <FeatureCard
             icon="📚"
-            title="Anonymous Voting"
-            description="Ensures voter identities remain confidential, preventing potential coercion or manipulation."
-          />
-
-          <FeatureCard
-            icon="📚"
             title="Fair Elections"
             description="Eliminates biases, ensuring that all votes carry equal weight."
           />
