@@ -17,7 +17,6 @@ const Dashboard = () => {
         <div>
           <h1>voting History</h1>
           <section className="space-y-3 border border-3 h-[30rem] p-2">
-            <Image src={"/Frame 241.svg"} width={250} height={250} />
             <Image src={"/Frame25.svg"} width={250} height={250} />
           </section>
         </div>

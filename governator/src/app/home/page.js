@@ -15,7 +15,7 @@ const Home = () => {
     }
   }, [address, isConnected, push]);
   return (
-    <div className=" space-y-3 m-auto flex items-center justify-center flex-col">
+    <div className=" space-y-3 gap-y-4 m-auto flex items-center justify-center flex-col">
       <div className="lg:w-4/6">
         <HomeFilter />
         <div className="text-left">
@@ -27,10 +27,6 @@ const Home = () => {
             <div className=" hover:border-b-2 shadow-md hover:bg-slate-500 bg-[url('/Frame.svg')]  px-1">
               <HomeTracker tracker={false} />
               <HomeVoteCard trend={false} />
-            </div>
-            <div className=" hover:border-b-2 shadow-md hover:bg-slate-500 bg-[url('/Frame.svg')]  px-1">
-              <HomeTracker tracker={null} />
-              <HomeVoteCard trend={true} />
             </div>
             <div className=" hover:border-b-2 shadow-md hover:bg-slate-500 bg-[url('/Frame.svg')]  px-1">
               <HomeTracker tracker={null} />
