@@ -1,3 +1,8 @@
+import { usePathname } from "next/navigation";
+
+
+
+
 const Admin = () => {
   return (
     <div>
