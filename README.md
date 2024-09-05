@@ -1,5 +1,5 @@
 # Welcome to Governator
-<link href="https://governator.vercel.app/home">visit</link>
+[visit](https://governator.vercel.app/home)
 
 
 <img src="../governator/public/logo.png" width="400" style="border-radius: 10px;" class="fade-in">
