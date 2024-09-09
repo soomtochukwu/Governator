@@ -10,12 +10,12 @@ import Image from "next/image";
 
 const Governator = () => {
   const [email, setEmail] = useState("");
-  const { isConnected, address } = useAccount();
-  const { push } = useRouter();
+  // const { isConnected, address } = useAccount();
+  // const { push } = useRouter();
 
-  if (isConnected && address) {
-    push("/");
-  }
+  // if (isConnected && address) {
+  //   push("/");
+  // }
 
     function handleSubmit(e) {
       e.preventDefault(); 
