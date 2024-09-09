@@ -1,4 +1,4 @@
-import KYCVerification from "../../../components/KYCVerfication";
+import KYCVerification from "../components/KYCVerfication";
 const KYCPage = () => {
   return (
     <div className="p-8">

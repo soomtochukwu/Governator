@@ -23,12 +23,10 @@ export const NavBarIcon = ({
   className,
   span,
   icon,
-  iconName,
-  highlight,
-  style,
+  iconName
 }) => {
   return (
-    <li className={className`${style && "bg-current"}`} onClick={highlight}>
+    <li className={className}>
       {icon}
       <span className={span}>{iconName}</span>
     </li>

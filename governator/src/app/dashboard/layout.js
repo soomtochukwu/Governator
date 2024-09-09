@@ -4,21 +4,21 @@ import { useAccount } from "wagmi";
 import MenuBar from "./components/menubar";
 import SideBar from "./components/sideBar";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function DashboardLayout({ children }) {
   const //
     path = usePathname(),
-    pathName = path.split("/").map((i) => i),
-    { isConnected, address } = useAccount(),
-    { push } = useRouter();
-  useEffect(() => {
-    if (!(isConnected && address)) {
-      push("/");
-    }
-  }, [isConnected, address]);
+    pathName = path.split("/").map((i) => i);
+  //   { isConnected, address } = useAccount(),
+  //   { push } = useRouter();
+  // useEffect(() => {
+  //   if (!(isConnected && address)) {
+  //     push("/");
+  //   }
+  // }, [isConnected, address]);
   return (
-    <main className="relative w-full h-screen overflow-hidden flex p-4 bg-[#e9e9e9] text-blue-950 gap-2">
+    <main className="relative w-full h-screen overflow-hidden flex p-4 text-blue-950 gap-2">
       <SideBar sidebar={false} />
       <div className="relative w-full">
         <MenuBar />
