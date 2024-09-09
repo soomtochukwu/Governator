@@ -10,21 +10,18 @@ import Image from "next/image";
 
 const Governator = () => {
   const [email, setEmail] = useState("");
-  const //
-    { isConnected, address } = useAccount(),
-    { push } = useRouter();
+  const { isConnected, address } = useAccount();
+  const { push } = useRouter();
 
-  useEffect(() => {
-    if (isConnected && address) {
-      push("/auth");
-    }
-  }, [isConnected, address]);
-
-  function handleSubmit(e) {
-    e.preventDefualt();
-    console.log(email);
-    setEmail("");
+  if (isConnected && address) {
+    push("/");
   }
+
+    function handleSubmit(e) {
+      e.preventDefault(); 
+      console.log(email);
+      setEmail("");
+    }
 
   return (
     <div className="bg-[#F8F8Fe] h-full  pt-4 text-[#0D0D0D] space-y-24">
@@ -162,23 +159,21 @@ const Governator = () => {
             </div>
             <div>
               <p className="text-md"> Keep up with us for more details </p>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-slate-100 w-7/12 rounded-lg p-2 mr-3 placeholder:text-gray-400 placeholder:text-md text-neutral"
-                placeholder="youremail@gmail.com"
-              />
-              <span>
-                <button
-                  className="btn btn-outline"
-                  type="button"
-                  onClick={handleSubmit}
-                >
-                  {" "}
-                  Subscribe
-                </button>
-              </span>
+              <from onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="bg-slate-100 w-7/12 rounded-lg p-2 mr-3 placeholder:text-gray-400 placeholder:text-md text-neutral"
+                  placeholder="youremail@gmail.com"
+                />
+                <span>
+                  <button className="btn btn-outline" type="button">
+                    {" "}
+                    Subscribe
+                  </button>
+                </span>
+              </from>
             </div>
           </section>
 

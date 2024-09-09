@@ -133,12 +133,4 @@ export const sideBar = [
   },
 ];
 
-export const click = (id) => {
-  dispatch({
-    type: actionType.style,
-    payload: {
-      ...style,
-      [id]: !true,
-    },
-  });
-};
+
