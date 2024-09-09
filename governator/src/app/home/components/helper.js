@@ -19,9 +19,16 @@ export function Logo({ src, className, span, spanName, width, height }) {
   );
 }
 
-export const NavBarIcon = ({ className, span, icon, iconName }) => {
+export const NavBarIcon = ({
+  className,
+  span,
+  icon,
+  iconName,
+  highlight,
+  style,
+}) => {
   return (
-    <li className={className}>
+    <li className={className`${style && "bg-current"}`} onClick={highlight}>
       {icon}
       <span className={span}>{iconName}</span>
     </li>
@@ -125,3 +132,13 @@ export const sideBar = [
     name: "kyc verification",
   },
 ];
+
+export const click = (id) => {
+  dispatch({
+    type: actionType.style,
+    payload: {
+      ...style,
+      [id]: !true,
+    },
+  });
+};

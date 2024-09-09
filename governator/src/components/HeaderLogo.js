@@ -2,14 +2,12 @@
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
-import Link from "next/link";
 
-// import "../../governator/src/app/globals.css";
-const Header = () => {
+const Header = ({ addOnstyles }) => {
   return (
-    <header className="flex items-center justify-between  shadow w-screen px-2 py-3">
-      <Logo span={"/logo.png"} width={"60"} height={"60"}></Logo>
-      <div className="nav">
+    <div className={`flex items-center justify-between static ${addOnstyles}`}>
+      <Logo span={"/logo.png"} width={"40"} height={"40"} />
+      <div className=" rounded-full">
         <ConnectButton
           accountStatus={{
             smallScreen: "avatar",
@@ -17,22 +15,22 @@ const Header = () => {
           }}
           chainStatus="icon"
           showBalance={{
-            smallScreen: false,
-            largeScreen: true,
+            smallScreen: true,
+            largeScreen: false,
           }}
+          label="Get started"
         />
       </div>
-    </header>
+    </div>
   );
 };
-
 export default Header;
 
 export function Logo({ className, span, width, height }) {
   return (
     <div className="flex items-center">
       <Image
-        src="/logo.png" // Replace with the actual logo path
+        src="/logo.png"
         alt="Governator Logo"
         width={width}
         height={height}
