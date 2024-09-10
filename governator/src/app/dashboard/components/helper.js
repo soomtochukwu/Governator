@@ -31,8 +31,6 @@ export const NavBarIcon = ({ className, span, icon, iconName }) => {
   );
 };
 
-//card sample
-
 export const DashBoardAvartarCard = ({ src, username, id, status, func }) => {
   return (
     <div className="block  md:flex items-center justify-between gap-5 p-2 bg-[url('/dashboard/Group1.svg')] bg-cover bg-center bg-[#342eca] text-nowrap rounded-lg">
@@ -75,13 +73,13 @@ export function KycStatusChecker(status) {
   );
 }
 
-function voterCard() {
+export function VoterCard() {
   return (
-    <div className="fler flex-col">
+    <div className="fler flex-col items-baseline bg-slate-500 h-32 text-xs rounded-lg justify-between">
       <h3>The time fest foe all votes:</h3>
-      <footer className="grid">
+      <footer className="flex">
         <ul className="inline-flex ">
-          <li className="badge">ennded</li>
+          <li className="badge">ended</li>
           <li>
             About {`300k`} votes{" "}
             <span className="text-success-content">verified</span>{" "}

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { DashBoardAvartarCard } from "./components/helper";
+import { DashBoardAvartarCard , VoterCard} from "./components/helper";
 
 export const user = {
   username: "John Doe",
@@ -30,6 +30,7 @@ const Dashboard = () => {
         <div>
           <h1>voting History</h1>
           <section className="space-y-3 border border-3 h-[30rem] p-2">
+            <VoterCard/>
             <Image src={"/Frame25.svg"} width={250} height={250} />
           </section>
         </div>
