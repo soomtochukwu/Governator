@@ -8,7 +8,7 @@ const Dashboard = () => {
         <div>
           <h1> Dashboard</h1>
           <section className="space-y-5">
-            <DashBoardAvartarCard {...user} } />
+            <DashBoardAvartarCard {...user}  />
 
             <div className="flex items-start gap-2 justify-start">
               <Image src={"/Frame92.svg"} width={100} height={100} />

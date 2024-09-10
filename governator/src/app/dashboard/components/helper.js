@@ -36,7 +36,7 @@ export const user = {
   username: "John Doe",
   id: "123456 ",
   status: false,
-  src: "/dashboad/animoji.svg",
+  src: "/dashboard/animoji.svg",
 };
 
 
