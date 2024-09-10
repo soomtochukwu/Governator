@@ -32,19 +32,10 @@ export const NavBarIcon = ({ className, span, icon, iconName }) => {
 };
 
 //card sample
-export const user = {
-  username: "John Doe",
-  id: "123456 ",
-  status: false,
-  src: "/dashboard/animoji.svg",
-};
 
-
-export const DashBoardAvartarCard = ({ src, username, id, status }) => {
-
-
+export const DashBoardAvartarCard = ({ src, username, id, status, func }) => {
   return (
-    <div className="block  md:flex items-center justify-between gap-5 p-2 bg-[url('/dashboad/Group1.svg')] bg-cover bg-center bg-[#342eca] text-nowrap rounded-lg">
+    <div className="block  md:flex items-center justify-between gap-5 p-2 bg-[url('/dashboard/Group1.svg')] bg-cover bg-center bg-[#342eca] text-nowrap rounded-lg">
       <div className="block  md:flex items-start gap-3 text-md text-nowrap">
         <Image src={src} width={100} height={100} priority={true} />
         <div>
@@ -53,11 +44,11 @@ export const DashBoardAvartarCard = ({ src, username, id, status }) => {
           </h1>
           <p className=" inline-flex gap-2">
             ID: {id}{" "}
-            <button className="text-xs">
+            <button className="text-xs" onClick={func}>
               <FaRegCopy />
             </button>{" "}
           </p>
-          <p  className="text-sm text-nowrap">
+          <p className="text-sm text-nowrap">
             KYC Status: {KycStatusChecker(status)}
           </p>
         </div>
@@ -74,12 +65,6 @@ export const DashBoardAvartarCard = ({ src, username, id, status }) => {
   );
 };
 
-// export function copyId(id){
-//  navigator.clipboard.writeText(id).then(()=>{
-//    alert('ID copied to clipboard')
-//  })
-// }
-
 export function KycStatusChecker(status) {
   return status ? (
     <span className="text-success">Verified</span>
@@ -87,6 +72,26 @@ export function KycStatusChecker(status) {
     <span className="text-error text-nowrap">
       Not verified <small className="text-green-400 text-xs">verify</small>
     </span>
+  );
+}
+
+function voterCard() {
+  return (
+    <div className="fler flex-col">
+      <h3>The time fest foe all votes:</h3>
+      <footer className="grid">
+        <ul className="inline-flex ">
+          <li className="badge">ennded</li>
+          <li>
+            About {`300k`} votes{" "}
+            <span className="text-success-content">verified</span>{" "}
+          </li>
+        </ul>
+        <span>
+          invited <span>icon</span>{" "}
+        </span>
+      </footer>
+    </div>
   );
 }
 
