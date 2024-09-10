@@ -22,16 +22,34 @@ const Dashboard = () => {
           <section className="space-y-5">
             <DashBoardAvartarCard {...user} func={copyId} />
             <div className="flex items-start gap-2 justify-start flex-wrap">
-              <Image src={"/Frame92.svg"} width={100} height={100} />
-              <Image src={"/Frame93.svg"} width={100} height={100} />
+              <Image
+                src={"/Frame92.svg"}
+                width={100}
+                height={100}
+                priority={true}
+                alt="card"
+              />
+              <Image
+                src={"/Frame93.svg"}
+                width={100}
+                height={100}
+                priority={true}
+                alt="card"
+              />
             </div>
           </section>
         </div>
         <div>
           <h1>voting History</h1>
           <section className="space-y-3 border border-3 h-[30rem] p-2">
-            <VoterCard/>
-            <Image src={"/Frame25.svg"} width={250} height={250} />
+            <VoterCard />
+            <Image
+              src={"/Frame25.svg"}
+              width={250}
+              height={250}
+              priority={true}
+              alt="card"
+            />
           </section>
         </div>
       </div>

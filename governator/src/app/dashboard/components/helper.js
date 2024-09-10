@@ -35,7 +35,7 @@ export const DashBoardAvartarCard = ({ src, username, id, status, func }) => {
   return (
     <div className="block  md:flex items-center justify-between gap-5 p-2 bg-[url('/dashboard/Group1.svg')] bg-cover bg-center bg-[#342eca] text-nowrap rounded-lg">
       <div className="block  md:flex items-start gap-3 text-md text-nowrap">
-        <Image src={src} width={100} height={100} priority={true} />
+        <Image src={src} width={100} height={100} priority={true} alt="avarter" />
         <div>
           <h1 className=" ">
             Username: <span className="text-success inline">{username}</span>{" "}

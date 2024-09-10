@@ -38,7 +38,13 @@ export function NotificationCard({ avater, name, purpose, time }) {
       <article className="flex justify-between items-center bg-[#121212] px-2 py-1 rounded-lg">
         <span className="inline-flex items-center gap-1">
           {" "}
-          <Image src={avater} width={30} height={30} />
+          <Image
+            src={avater}
+            width={30}
+            height={30}
+            priority={true}
+            alt="card"
+          />
           <span>{name}</span>
           {purpose}
         </span>
@@ -86,10 +92,10 @@ export function HomeVoteCard({ trend }) {
     <article className="md:flex  items-center justify-between pb-1">
       <div className="inline-flex  items-center gap-2">
         <div className="inline-flex ">
-          <Image src={`/animoji3.png`} width={30} height={30} />
-          <Image src={`/animoji3.png`} width={30} height={30} />
-          <Image src={`/animoji3.png`} width={30} height={30} />
-          <Image src={`/animoji3.png`} width={30} height={30} />
+          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
+          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
+          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
+          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
         </div>
         <p className="text-xs first-letter:capitalize">
           about <span className="text-green-500"> {`120`}k </span>votes and
