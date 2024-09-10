@@ -1,13 +1,15 @@
 import Image from "next/image";
+import { user, DashBoardAvartarCard } from "./components/helper";
 
 const Dashboard = () => {
   return (
     <div>
-      <div className="flex justify-between items-start text-left pt-3">
+      <div className="flex justify-between items-start text-left pt-3 text-base">
         <div>
           <h1> Dashboard</h1>
           <section className="space-y-5">
-            <Image src={"/Frame15.svg"} width={500} height={300} />
+            <DashBoardAvartarCard {...user} } />
+
             <div className="flex items-start gap-2 justify-start">
               <Image src={"/Frame92.svg"} width={100} height={100} />
               <Image src={"/Frame93.svg"} width={100} height={100} />
