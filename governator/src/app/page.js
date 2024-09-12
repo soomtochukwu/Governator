@@ -10,12 +10,12 @@ import Image from "next/image";
 
 const Governator = () => {
   const [email, setEmail] = useState("");
-  // const { isConnected, address } = useAccount();
-  // const { push } = useRouter();
+  const { isConnected, address } = useAccount();
+  const { push } = useRouter();
 
-  // if (isConnected && address) {
-  //   push("/");
-  // }
+  if (isConnected && address) {
+    push("/");
+  }
 
     function handleSubmit(e) {
       e.preventDefault(); 
@@ -25,7 +25,7 @@ const Governator = () => {
 
   return (
     <div className="bg-[#F8F8Fe] h-full  pt-4 text-[#0D0D0D] space-y-24">
-      <HeaderLogo addOnstyles={" font-bold px-3 "} />
+      < HeaderLogo addOnstyles={" font-bold px-3 "} />
       <div className=" text-center space-y-4 ">
         <h1 className="first-letter:capitalize font-bold text-3xl tracking-wider  ">
           It's not just a decisions
