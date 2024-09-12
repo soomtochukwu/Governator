@@ -5,6 +5,7 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
 import { FaXTwitter, FaGithub, FaRegCopy } from "react-icons/fa6";
+import { VscPersonAdd } from "react-icons/vsc";
 
 export function Logo({ src, className, span, spanName, width, height }) {
   return (
@@ -35,7 +36,13 @@ export const DashBoardAvartarCard = ({ src, username, id, status, func }) => {
   return (
     <div className="block  md:flex items-center justify-between gap-5 p-2 bg-[url('/dashboard/Group1.svg')] bg-cover bg-center bg-[#342eca] text-nowrap rounded-lg">
       <div className="block  md:flex items-start gap-3 text-md text-nowrap">
-        <Image src={src} width={100} height={100} priority={true} alt="avarter" />
+        <Image
+          src={src}
+          width={100}
+          height={100}
+          priority={true}
+          alt="avarter"
+        />
         <div>
           <h1 className=" ">
             Username: <span className="text-success inline">{username}</span>{" "}
@@ -75,18 +82,18 @@ export function KycStatusChecker(status) {
 
 export function VoterCard() {
   return (
-    <div className="fler flex-col items-baseline bg-slate-500 h-32 text-xs rounded-lg justify-between">
-      <h3>The time fest foe all votes:</h3>
-      <footer className="flex">
-        <ul className="inline-flex ">
-          <li className="badge">ended</li>
+    <div className="grid grid-cols-1 content-between bg-[url('/dashboard/Group.svg')] bg-slate-500 bg-cover bg-left h-32 text-xs rounded-lg p-1 ">
+      <h3>The time fest for all votes:</h3>
+      <footer className=" flex justify-between items-center ">
+        <ul className="inline-flex text-[.48rem] items-center gap-2">
+          <li className="badge text-[.44rem]  -py-1">ended</li>
           <li>
-            About {`300k`} votes{" "}
-            <span className="text-success-content">verified</span>{" "}
+            About {`300k`} votes <span className="text-success">verified</span>{" "}
           </li>
         </ul>
-        <span>
-          invited <span>icon</span>{" "}
+        <span className="inline-flex items-center gap-1 justify-self-end text-orange-400 ">
+          invited
+          <VscPersonAdd />
         </span>
       </footer>
     </div>
